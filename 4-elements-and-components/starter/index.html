@@ -43,7 +43,7 @@
 
     const Header = () => {
       return (
-        React.createElement("header",{className: "main"},
+        React.createElement("header",{id: "main"},
           React.createElement(React.Fragment, {},
             h1LinkEl(),
             pEl()
@@ -61,6 +61,23 @@
     // The second list item should be a link to the "ReactDOM Docs" overview "https://reactjs.org/docs/react-dom.html"
     // The third should be a link to a React related resource of your choice
 
+    const List = () => {
+      return (
+        React.createElement("ul",
+        {className: "react-links", id:"top"},
+          React.createElement("li", {},
+            React.createElement("a", { href:"https://reactjs.org/docs" }, "React Docs")
+            ),
+            React.createElement("li", {},
+            React.createElement("a", { href:"https://reactjs.org/docs/react-dom.html" }, "ReactDOM Docs")
+            ),
+            React.createElement("li", {},
+            React.createElement("a", { href:"https://docs.mongodb.com/manual/" }, "MongoDB")
+            ),
+        )
+      )
+    }
+
 
     // Practice #5
     // Create a component named "App"
@@ -71,7 +88,7 @@
     ReactDOM.render(
       // Place your element variable or component function call here to test
       
-     Header(),
+     List(),
     
       document.getElementById('root')
     );
