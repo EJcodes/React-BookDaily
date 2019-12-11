@@ -84,11 +84,21 @@
     // Have it return a Fragment with the Header and List components inside of it
 
 
+    const App = () => {
+      return (
+        React.createElement(React.Fragment, {},
+        Header(),
+        List()
+        )
+      )
+    }
+
+
 
     ReactDOM.render(
       // Place your element variable or component function call here to test
       
-     List(),
+     App(),
     
       document.getElementById('root')
     );
