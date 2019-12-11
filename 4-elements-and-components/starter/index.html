@@ -41,6 +41,17 @@
     // Have it return a header with an ID of "main" 
     // Include h1El and pEl inside of the header element
 
+    const Header = () => {
+      return (
+        React.createElement("header",{className: "main"},
+          React.createElement(React.Fragment, {},
+            h1LinkEl(),
+            pEl()
+          )
+        )
+      )
+    }
+
 
     // Practice #4
     // Create a component named "List"
@@ -59,8 +70,8 @@
 
     ReactDOM.render(
       // Place your element variable or component function call here to test
-      pEl(),
-      h1LinkEl(),
+      
+     Header(),
     
       document.getElementById('root')
     );
